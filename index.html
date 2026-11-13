@@ -1,0 +1,1781 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f0e7">
+  <title>Vende-se Apartamento em Cabo Frio</title>
+  <meta name="description"
+    content="Conheça o apartamento no Edifício Helsinki, em Cabo Frio, a três quarteirões da praia. Venda direta com o proprietário.">
+
+  <!-- Open Graph: prévia ao compartilhar no WhatsApp, Facebook e outras redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Apartamento à venda em Cabo Frio | Bairro Passagem">
+  <meta property="og:description" content="Conheça o apartamento no Edifício Helsinki, no bairro Passagem, em Cabo Frio. A três quadras da Praia do Forte. Venda direta com o proprietário.">
+  <meta property="og:image" content="https://vende-se-apartamento.github.io/Cabo-Frio/assets/sala.jpg">
+  <meta property="og:image:alt" content="Sala de estar do apartamento à venda no bairro Passagem, em Cabo Frio">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apartamento à venda em Cabo Frio | Bairro Passagem">
+  <meta name="twitter:description" content="Apartamento no Edifício Helsinki, próximo à Praia do Forte. Venda direta com o proprietário.">
+  <meta name="twitter:image" content="https://vende-se-apartamento.github.io/Cabo-Frio/assets/sala.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #244b58;
+      --muted: #607780;
+      --sea: #278b91;
+      --sea-dark: #176d76;
+      --sand: #f2f5f3;
+      --cream: #fbfcfa;
+      --line: #dce7e5;
+      --rust: #278b91;
+      --white: #fff;
+      --shadow: 0 18px 55px #173e4720
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.65
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .wrap {
+      width: min(1190px, calc(100% - 48px));
+      margin: auto
+    }
+
+    .hero-shell {
+      margin: 14px 14px 0;
+      position: relative;
+      min-height: 690px;
+      border-radius: 24px 24px 0 0;
+      overflow: hidden;
+      background: #6da7b2
+    }
+
+    .hero-shell:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(12, 43, 53, .48) 0%, rgba(12, 43, 53, .25) 43%, rgba(12, 43, 53, .04) 82%), url('assets/praia-cabo-frio.webp') center 52%/cover no-repeat;
+      transform: scale(1.005)
+    }
+
+    .topbar {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 22px 0
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px
+    }
+
+    .menu-toggle {
+      display: none
+    }
+
+    .logo {
+      font: italic 600 1.8rem 'Playfair Display', serif;
+      color: #fff;
+      letter-spacing: -.04em;
+      text-shadow: 0 2px 14px #12364066;
+      white-space: nowrap
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: .83rem;
+      color: #fff;
+      text-shadow: 0 1px 8px #12364066
+    }
+
+    .links a {
+      padding: 8px 0;
+      border-bottom: 1px solid transparent
+    }
+
+    .links a:hover {
+      border-color: #fff;
+      color: #fff
+    }
+
+    .nav-cta {
+      border: 1px solid #ffffffb8;
+      color: #fff;
+      border-radius: 999px;
+      padding: 10px 17px;
+      font-size: .8rem;
+      font-weight: 700;
+      background: #278b91;
+      backdrop-filter: blur(5px)
+    }
+
+    .nav-cta:hover {
+      background: #176d76
+    }
+
+    .whatsapp-nav {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      background: var(--sea);
+      border: 1px solid #ffffffb8;
+      color: #fff;
+      border-radius: 999px;
+      padding: 10px 17px;
+      font-size: .8rem;
+      font-weight: 700;
+      box-shadow: 0 7px 24px #174a3b25;
+      transition: background .2s, transform .2s
+    }
+
+    .whatsapp-nav:hover {
+      background: var(--sea-dark);
+      transform: translateY(-1px)
+    }
+
+    .whatsapp-nav svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+      flex: none
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 178px 0 145px;
+      max-width: 690px
+    }
+
+    .eyebrow {
+      font-size: .7rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #e8ffff
+    }
+
+    h1,
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -.035em
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 5.5vw, 5rem);
+      line-height: 1.04;
+      margin: 18px 0 18px;
+      color: #fff;
+      max-width: 660px;
+      text-shadow: 0 3px 18px #102f3980
+    }
+
+    .hero-content p {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: #f3fbfb;
+      max-width: 480px;
+      text-shadow: 0 2px 12px #102f3980;
+      margin: 0 0 27px
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .86rem;
+      transition: .2s;
+      background: var(--sea);
+      color: #fff;
+      border: 1px solid var(--sea);
+      min-height: 46px
+    }
+
+    .btn-main {
+      background: var(--sea);
+      color: white;
+      border-color: var(--sea)
+    }
+
+    .btn-main:hover {
+      background: var(--sea-dark);
+      transform: translateY(-1px)
+    }
+
+    .btn-light {
+      border: 1px solid var(--sea);
+      color: #fff;
+      background: #176d76
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 26px;
+      color: #f2fbfb;
+      font-size: .82rem;
+      text-shadow: 0 1px 8px #12364066
+    }
+
+    .hero-meta:before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #6e9b83;
+      box-shadow: 0 0 0 5px #6e9b8324
+    }
+
+    .wave {
+      position: absolute;
+      z-index: 2;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      display: block
+    }
+
+    .wave path {
+      fill: var(--cream)
+    }
+
+    .quickfacts {
+      position: relative;
+      z-index: 4;
+      margin: -8px auto 0;
+      width: min(950px, calc(100% - 56px));
+      background: #fffdf9;
+      border: 1px solid #eee5d9;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 18px 12px
+    }
+
+    .fact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 3px 16px;
+      border-right: 1px solid var(--line)
+    }
+
+    .fact:last-child {
+      border: 0
+    }
+
+    .fact b {
+      display: block;
+      font-size: .84rem;
+      color: #244b58
+    }
+
+    .fact small {
+      display: block;
+      color: #71868b;
+      font-size: .7rem
+    }
+
+    .fact-icon {
+      font-size: 1.25rem;
+      color: var(--sea)
+    }
+
+    section {
+      scroll-margin-top: 24px
+    }
+
+    .intro {
+      padding: 94px 0 84px
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 80px;
+      align-items: center
+    }
+
+    .intro h2,
+    .section-title {
+      font-size: clamp(2.1rem, 4vw, 3.35rem);
+      line-height: 1.12;
+      color: #244b58;
+      margin: 12px 0 18px
+    }
+
+    .intro p,
+    .section-lead {
+      color: var(--muted);
+      max-width: 650px
+    }
+
+    .intro-note {
+      padding: 30px 32px;
+      background: #eaf2f1;
+      border-radius: 8px;
+      border-left: 3px solid var(--sea)
+    }
+
+    .intro-note strong {
+      font: 600 1.4rem 'Playfair Display';
+      display: block;
+      margin-bottom: 8px
+    }
+
+    .intro-note p {
+      margin: 0;
+      font-size: .92rem
+    }
+
+    .gallery-section {
+      background: #fff;
+      padding: 82px 0
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 30px
+    }
+
+    .section-head .section-lead {
+      max-width: 420px;
+      margin: 0 0 7px
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 13px
+    }
+
+    .shot {
+      position: relative;
+      border: 0;
+      padding: 0;
+      background: #eee7dc;
+      overflow: hidden;
+      min-height: 220px;
+      cursor: zoom-in;
+      border-radius: 7px;
+      text-align: left
+    }
+
+    .shot:nth-child(1),
+    .shot:nth-child(5),
+    .shot:nth-child(11) {
+      grid-column: span 2;
+      grid-row: span 2
+    }
+
+    .shot img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+      object-fit: cover;
+      transition: transform .45s
+    }
+
+    .shot:hover img {
+      transform: scale(1.035)
+    }
+
+    .shot:after {
+      content: "";
+      position: absolute;
+      inset: 45% 0 0;
+      background: linear-gradient(transparent, #20180e8c)
+    }
+
+    .shot span {
+      position: absolute;
+      z-index: 1;
+      left: 15px;
+      bottom: 13px;
+      color: white;
+      font-size: .78rem;
+      font-weight: 600
+    }
+
+    .location {
+      padding: 86px 0;
+      background: #eaf2f1
+    }
+
+    .location-grid {
+      width: min(1240px, calc(100% - 64px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+      gap: clamp(32px, 5vw, 72px);
+      align-items: center;
+      justify-content: center
+    }
+
+    .location-grid > div:first-child {
+      max-width: 760px
+    }
+
+    .location .distance-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px
+    }
+
+    .location h2 {
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      color: #244b58;
+      margin: 12px 0 18px
+    }
+
+    .location p {
+      color: #607780
+    }
+
+    .distance-card {
+      background: transparent;
+      border-radius: 8px;
+      padding: 32px;
+      box-shadow: none
+    }
+
+    .distance-card .big {
+      font: 600 3.5rem 'Playfair Display';
+      line-height: 1;
+      color: #397f89
+    }
+
+    .distance-card small {
+      color: #71868b
+    }
+
+    .distance-card p {
+      font-size: .85rem;
+      margin-bottom: 0
+    }
+
+    .distance-card .location-video-frame {
+      display: inline-block;
+      max-width: 100%;
+      margin-top: 18px;
+      padding: 3px;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      line-height: 0
+    }
+
+    .distance-card .location-video {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 430px;
+      object-fit: contain;
+      border-radius: 4px
+    }
+
+    .details {
+      padding: 84px 0
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin-top: 28px
+    }
+
+    .detail {
+      background: white;
+      border: 1px solid var(--line);
+      padding: 23px;
+      min-height: 120px
+    }
+
+    .detail small {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: .68rem;
+      color: #71868b
+    }
+
+    .detail b {
+      display: block;
+      font: 600 1.25rem 'Playfair Display';
+      margin-top: 7px;
+      color: #244b58
+    }
+
+    .owner {
+      background: #315e67;
+      color: white;
+      padding: 75px 0
+    }
+
+    .owner-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 60px;
+      align-items: center
+    }
+
+    .owner h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      margin: 12px 0 16px
+    }
+
+    .owner p {
+      color: #e0e9e7;
+      max-width: 600px
+    }
+
+    .owner .eyebrow {
+      color: #c4dcd7
+    }
+
+    .owner-card {
+      border: 1px solid #ffffff55;
+      background: #ffffff0e;
+      padding: 28px
+    }
+
+    .owner-card b {
+      font: 600 1.35rem 'Playfair Display';
+      display: block
+    }
+
+    .owner-card p {
+      font-size: .88rem
+    }
+
+    .contact-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .contact-actions .whatsapp-nav {
+      min-height: 55px;
+      padding: 14px 25px
+    }
+
+    .contact-actions .whatsapp-nav svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+      flex: none
+    }
+
+    .contact-actions .phone-nav {
+      white-space: nowrap
+    }
+
+    .faq {
+      padding: 75px 0
+    }
+
+    .faq h2 {
+      font-size: 2.5rem;
+      margin: 10px 0 25px
+    }
+
+    .faq details {
+      border-top: 1px solid var(--line);
+      padding: 17px 0
+    }
+
+    .faq details:last-child {
+      border-bottom: 1px solid var(--line)
+    }
+
+    .faq summary {
+      font-weight: 600;
+      cursor: pointer
+    }
+
+    .faq details p {
+      color: var(--muted);
+      max-width: 760px
+    }
+
+    .footer {
+      background: #254c55;
+      color: #dce8e5;
+      padding: 26px 0;
+      font-size: .78rem
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px
+    }
+
+    .float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 10;
+      background: var(--sea);
+      color: white;
+      padding: 12px 19px;
+      border: 1px solid var(--sea);
+      border-radius: 999px;
+      font-size: .86rem;
+      font-weight: 700;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      box-shadow: 0 7px 24px #174a3b35;
+      transition: background .2s, transform .2s
+    }
+
+    .float:hover {
+      background: var(--sea-dark);
+      transform: translateY(-2px)
+    }
+
+    .float svg {
+      width: 21px;
+      height: 21px;
+      display: block;
+      flex: none
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      background: #101a1ddd;
+      align-items: center;
+      justify-content: center;
+      padding: 25px
+    }
+
+    .lightbox.open {
+      display: flex
+    }
+
+    .lightbox img {
+      max-width: 94vw;
+      max-height: 84vh;
+      object-fit: contain
+    }
+
+    .lightbox-close {
+      position: absolute;
+      right: 25px;
+      top: 15px;
+      z-index: 2;
+      color: white;
+      border: 0;
+      background: none;
+      font-size: 2.5rem;
+      cursor: pointer
+    }
+
+    .lightbox-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 58px;
+      border: 1px solid #ffffff88;
+      border-radius: 8px;
+      background: #102f3970;
+      color: #fff;
+      font: 400 2.2rem/1 'DM Sans', sans-serif;
+      cursor: pointer;
+      transition: background .2s, transform .2s
+    }
+
+    .lightbox-arrow:hover {
+      background: #176d76;
+      transform: translateY(-50%) scale(1.04)
+    }
+
+    .lightbox-prev {
+      left: 22px
+    }
+
+    .lightbox-next {
+      right: 22px
+    }
+
+    .lightbox p {
+      position: absolute;
+      bottom: 8px;
+      color: white;
+      font-size: .85rem
+    }
+
+    @media(max-width:760px) {
+      .lightbox {
+        padding: 54px 12px 55px
+      }
+
+      .lightbox img {
+        max-width: 100%;
+        max-height: 78vh
+      }
+
+      .lightbox-arrow {
+        width: 40px;
+        height: 48px;
+        font-size: 1.8rem;
+        background: #102f39a6
+      }
+
+      .lightbox-prev {
+        left: 8px
+      }
+
+      .lightbox-next {
+        right: 8px
+      }
+
+      .lightbox-close {
+        right: 12px;
+        top: 8px
+      }
+    }
+
+    @media(max-width:760px) {
+      .wrap {
+        width: calc(100% - 34px)
+      }
+
+      .hero-shell {
+        margin: 8px 8px 0;
+        min-height: 650px;
+        border-radius: 17px 17px 0 0
+      }
+
+      .hero-shell:before {
+        background: linear-gradient(90deg, rgba(12, 43, 53, .58) 0%, rgba(12, 43, 53, .30) 55%, rgba(12, 43, 53, .10) 100%), url('assets/praia-cabo-frio.webp') 55% center/cover no-repeat
+      }
+
+      .topbar {
+        padding: 16px 0
+      }
+
+      .nav {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        gap: 12px;
+        padding-right: 8px
+      }
+
+      .menu-toggle {
+        display: flex;
+        flex: 0 0 44px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 44px;
+        min-width: 44px;
+        max-width: 44px;
+        height: 44px;
+        min-height: 44px;
+        max-height: 44px;
+        aspect-ratio: 1 / 1;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        appearance: none;
+        -webkit-appearance: none;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: none
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 19px;
+        height: 2px;
+        border-radius: 2px;
+        background: #fff;
+        transition: transform .2s, opacity .2s
+      }
+
+      .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg)
+      }
+
+      .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0
+      }
+
+      .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg)
+      }
+
+      .links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        z-index: 10;
+        min-width: 190px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+        padding: 10px;
+        background: rgba(24, 83, 96, .96);
+        border: 1px solid #ffffff55;
+        border-radius: 14px;
+        box-shadow: 0 12px 30px #102f3966;
+        backdrop-filter: blur(10px)
+      }
+
+      .links.open {
+        display: flex
+      }
+
+      .links a {
+        padding: 10px 13px;
+        border: 0;
+        border-radius: 8px;
+        color: #fff
+      }
+
+      .links a:hover {
+        background: #ffffff20
+      }
+
+      .logo {
+        min-width: 0;
+        font-size: clamp(1.05rem, 4.8vw, 1.5rem)
+      }
+
+      .nav-cta {
+        font-size: .72rem;
+        padding: 9px 12px
+      }
+
+      .hero-content {
+        padding: 160px 0 140px
+      }
+
+      .hero-content p {
+        font-size: .98rem
+      }
+
+      .hero h1 {
+        font-size: clamp(2.7rem, 12vw, 4rem)
+      }
+
+      .wave {
+        height: 65px
+      }
+
+      .quickfacts {
+        width: calc(100% - 32px);
+        grid-template-columns: 1fr;
+        margin-top: -2px;
+        padding: 9px 15px
+      }
+
+      .fact {
+        justify-content: flex-start;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 10px 8px
+      }
+
+      .fact:last-child {
+        border-bottom: 0
+      }
+
+      .intro,
+      .gallery-section,
+      .location,
+      .details,
+      .faq {
+        padding: 60px 0
+      }
+
+      .intro-grid,
+      .location-grid,
+      .owner-grid {
+        grid-template-columns: 1fr;
+        gap: 28px
+      }
+
+      .location-grid {
+        width: calc(100% - 34px)
+      }
+
+      .location .distance-card {
+        padding: 8px 0;
+        justify-content: center
+      }
+
+      .section-head {
+        display: block
+      }
+
+      .section-head .section-lead {
+        margin-top: 10px
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px
+      }
+
+      .shot {
+        min-height: 155px
+      }
+
+      .shot img {
+        min-height: 155px
+      }
+
+      .shot:nth-child(1),
+      .shot:nth-child(5),
+      .shot:nth-child(11) {
+        grid-column: span 2;
+        grid-row: auto
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .owner {
+        padding: 60px 0
+      }
+
+      .footer-inner {
+        flex-direction: column
+      }
+
+      .float {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 16px
+      }
+    }
+
+    @media(max-width:420px) {
+      .hero-actions .btn {
+        width: 100%
+      }
+
+      .details-grid {
+        gap: 8px
+      }
+
+      .detail {
+        padding: 16px
+      }
+
+      .detail b {
+        font-size: 1.08rem
+      }
+    }
+
+    .gallery-groups {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .gallery-card {
+      position: relative;
+      display: block;
+      width: 100%;
+      min-height: 390px;
+      padding: 0;
+      border: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      text-align: left;
+      cursor: pointer;
+      background: #244b58;
+      color: #fff
+    }
+
+    .gallery-card>img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s
+    }
+
+    .gallery-card:hover>img {
+      transform: scale(1.045)
+    }
+
+    .gallery-card-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(8, 37, 46, .88) 0%, rgba(8, 37, 46, .30) 48%, rgba(8, 37, 46, .02) 100%)
+    }
+
+    .gallery-card-copy {
+      position: absolute;
+      inset: auto 24px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px
+    }
+
+    .gallery-card-copy small {
+      font-size: .68rem;
+      letter-spacing: .15em;
+      font-weight: 700;
+      color: #c8eeee
+    }
+
+    .gallery-card-copy strong {
+      font: 600 clamp(1.45rem, 2vw, 1.9rem)/1.12 'Playfair Display', serif;
+      color: #fff
+    }
+
+    .gallery-card-copy em {
+      font-style: normal;
+      font-size: .82rem;
+      color: #edf7f6
+    }
+
+    .gallery-card-copy .btn {
+      margin-top: 9px;
+      pointer-events: none
+    }
+
+    .gallery-card-copy .btn span {
+      margin-left: 8px
+    }
+
+    .gallery-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 25;
+      background: rgba(10, 31, 38, .78);
+      padding: 24px;
+      overflow: auto
+    }
+
+    .gallery-modal.open {
+      display: block
+    }
+
+    .gallery-modal-panel {
+      max-width: 1100px;
+      margin: 24px auto;
+      background: #fbfcfa;
+      border-radius: 16px;
+      padding: 26px
+    }
+
+    .gallery-modal-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 22px
+    }
+
+    .gallery-modal-head small {
+      font-size: .68rem;
+      letter-spacing: .15em;
+      color: var(--sea);
+      font-weight: 700
+    }
+
+    .gallery-modal-head h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--ink);
+      margin: 4px 0 0
+    }
+
+    .modal-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px
+    }
+
+    .modal-shot {
+      border: 0;
+      padding: 0;
+      background: #e8eeee;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: zoom-in;
+      text-align: left
+    }
+
+    .modal-shot img {
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      transition: transform .35s
+    }
+
+    .modal-shot:hover img {
+      transform: scale(1.035)
+    }
+
+    .modal-shot span {
+      display: block;
+      padding: 10px 12px;
+      font-size: .78rem;
+      color: var(--ink);
+      font-weight: 600
+    }
+
+    .gallery-video-note {
+      margin: 20px 0 0;
+      padding: 14px 16px;
+      background: #eaf2f1;
+      border-radius: 8px;
+      color: #526f75;
+      font-size: .85rem
+    }
+
+    .modal-close {
+      white-space: nowrap
+    }
+
+    .lightbox {
+      z-index: 40
+    }
+
+    @media(max-width:760px) {
+      .gallery-groups {
+        grid-template-columns: 1fr
+      }
+
+      .gallery-card {
+        min-height: 320px
+      }
+
+      .gallery-modal {
+        padding: 10px
+      }
+
+      .gallery-modal-panel {
+        margin: 10px auto;
+        padding: 16px
+      }
+
+      .modal-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px
+      }
+
+      .modal-shot img {
+        height: 150px
+      }
+
+      .gallery-modal-head {
+        align-items: flex-start
+      }
+
+      .modal-close {
+        padding: 9px 13px;
+        min-height: 40px
+      }
+    }
+  </style>
+  <style>
+    /* WhatsApp centralizado abaixo da apresentação, mantendo a fotografia e o menu intactos */
+    .hero-whatsapp-row {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      max-width: calc(100vw - 34px);
+      margin-top: 20px
+    }
+
+    .hero-whatsapp-row .whatsapp-nav {
+      font-size: 1rem;
+      padding: 14px 25px;
+      min-height: 55px;
+      box-shadow: 0 8px 24px #123b4655
+    }
+
+    .hero-whatsapp-row .whatsapp-nav svg {
+      width: 23px;
+      height: 23px
+    }
+
+    @media(max-width:760px) {
+      .hero-whatsapp-row {
+        max-width: calc(100vw - 34px);
+        justify-content: center;
+        margin-top: 22px
+      }
+
+      .hero-whatsapp-row .whatsapp-nav {
+        font-size: .95rem;
+        padding: 12px 22px
+      }
+    }
+  </style>
+  <style>
+    /* Ficha do imóvel: apresentação em ícones, alinhada à identidade visual do site */
+    .details-grid.property-facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px 24px;
+      margin-top: 28px;
+    }
+
+    .property-facts .property-fact {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      min-height: 104px;
+      padding: 17px 12px;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .property-facts .fact-symbol {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      fill: none;
+      stroke: var(--sea);
+      stroke-width: 1.65;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .property-facts .detail small {
+      display: block;
+      margin: 0 0 5px;
+      color: var(--muted);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .68rem;
+      letter-spacing: .09em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .property-facts .detail b {
+      display: block;
+      margin: 0;
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    @media(max-width:900px) {
+      .details-grid.property-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 18px
+      }
+    }
+
+    @media(max-width:480px) {
+      .details-grid.property-facts {
+        grid-template-columns: 1fr;
+        gap: 4px
+      }
+
+      .property-facts .property-fact {
+        min-height: 82px;
+        padding: 13px 8px
+      }
+
+      .property-facts .fact-symbol {
+        width: 30px;
+        height: 30px;
+        flex-basis: 30px
+      }
+    }
+
+    /* Identificação das comodidades localizadas na área comum do prédio */
+    .property-facts .fact-group-label {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 10px 12px -4px;
+      color: var(--sea-dark);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .property-facts .fact-group-label:after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero-shell" id="inicio">
+    <header class="topbar">
+      <div class="wrap nav"><a class="logo" href="#inicio">Vende-se Apartamento</a>
+        <nav class="links" id="mobile-navigation"><a href="#apartamento">Informações</a><a href="#fotos">Galerias</a><a
+            href="#localizacao">Localização</a><a href="#contato">Contato</a></nav><button class="menu-toggle"
+          type="button" aria-label="Abrir menu" aria-expanded="false"
+          aria-controls="mobile-navigation"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <div class="wrap hero-content">
+      <div class="eyebrow">Cabo Frio, RJ · Brasil</div>
+      <h1>Um lugar seu em Cabo Frio</h1>
+      <p>Vende-se apartamento, a três quarteirões da Praia do Forte</p>
+      <div class="hero-whatsapp-row"><a class="nav-cta whatsapp-nav" href="https://wa.me/5522988161647" target="_blank"
+          rel="noopener noreferrer" aria-label="WhatsApp do proprietário" title="WhatsApp do proprietário"><svg
+            viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <path fill="currentColor"
+              d="M16.02 3.2A12.65 12.65 0 0 0 5.1 22.22L3.4 28.4l6.33-1.66A12.7 12.7 0 1 0 16.02 3.2Zm0 23.1c-2 0-3.96-.54-5.67-1.57l-.4-.24-3.76.99 1-3.66-.26-.42a10.4 10.4 0 1 1 9.09 4.9Zm5.72-7.8c-.31-.16-1.84-.91-2.13-1.02-.29-.1-.5-.16-.7.16-.21.31-.8 1.02-.98 1.23-.18.2-.36.23-.67.08-.31-.16-1.31-.48-2.5-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.14-.63.14-.14.31-.36.47-.54.16-.18.21-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.69-.96-2.31-.25-.6-.51-.52-.7-.53h-.6c-.2 0-.54.08-.82.39-.28.31-1.08 1.05-1.08 2.57s1.1 2.98 1.26 3.19c.15.2 2.16 3.3 5.23 4.62.73.31 1.3.5 1.75.64.74.24 1.42.2 1.95.12.6-.09 1.84-.75 2.1-1.48.26-.72.26-1.33.18-1.47-.08-.13-.28-.2-.59-.36Z" />
+          </svg><span>WhatsApp</span></a></div>
+    </div><svg class="wave" viewBox="0 0 1440 130" preserveAspectRatio="none" aria-hidden="true">
+      <path
+        d="M0,55 C130,105 245,95 365,57 C505,13 610,23 735,62 C870,105 1010,112 1135,66 C1260,20 1360,27 1440,62 L1440,130 L0,130 Z" />
+    </svg>
+  </section>
+  <div class="quickfacts">
+    <div class="fact"><span class="fact-icon">⌖</span>
+      <div><b>Cabo Frio · RJ</b><small>Bairro Passagem</small></div>
+    </div>
+    <div class="fact"><span class="fact-icon">≈</span>
+      <div><b>3 Quarteirões da Praia do Forte</b><small>Proximidade para ir caminhando</small></div>
+    </div>
+    <div class="fact"><span class="fact-icon">♡</span>
+      <div><b>Venda Direta</b><small>Converse com o proprietário</small></div>
+    </div>
+  </div>
+  <main>
+    <section class="details" id="apartamento">
+      <div class="wrap">
+        <div class="eyebrow">Ficha do imóvel</div>
+        <h2 class="section-title">Informações</h2>
+        <p class="section-lead">Conheça as principais características do apartamento.</p>
+        <div class="details-grid property-facts">
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="16" rx="2" />
+              <path d="M8 4v16M3 9h5M3 14h5M12 8h5M12 12h5M12 16h3" />
+            </svg>
+            <div><small>Área privativa</small><b>70 m²</b></div>
+          </div>
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M3 18V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v11M6 10a1.5 1.5 0 0 1 1.5-1.5h2A1.5 1.5 0 0 1 11 10v2H6v-2ZM13 10a1.5 1.5 0 0 1 1.5-1.5h2A1.5 1.5 0 0 1 18 10v2h-5v-2ZM4 12h16l1 3v3H3v-3l1-3ZM3 18v2M21 18v2" />
+            </svg>
+            <div><small>Quartos e Suítes</small><b>2 quartos, sendo 1 suíte</b></div>
+          </div>
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4 18V8a5 5 0 0 1 5-5h2a1 1 0 0 1 0 2H9a3 3 0 0 0-3 3v10M11 10a5 5 0 0 1 9.5-2l1 2-9 5-1-2a5 5 0 0 1-.5-3ZM15 16l-.7 1.8M19 14l-.7 1.8M18 19l-.7 1.8" />
+            </svg>
+            <div><small>Banheiros</small><b>2 banheiros</b></div>
+          </div>
+
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 21V4h16v17M8 8h8M8 12h8M8 16h8M10 21v-3h4v3" />
+            </svg>
+            <div><small>Andar</small><b>1º andar, equivalente ao 3º pavimento</b></div>
+          </div>
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4 12V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3M3 12a2 2 0 0 1 2 2v4h14v-4a2 2 0 0 1 2-2v7H3zM6 18v2M18 18v2M8 11h8" />
+            </svg>
+            <div><small>Mobiliário</small><b>Mobiliado</b></div>
+          </div>
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 11V3.5h12V11M12 3.5V11M3 11.5v1.5h18v-1.5M4 13v7M6.5 13v7M9 13v7M11.5 13v7M14 13v7M16.5 13v7M19 13v7M21 13v7M2.5 20h19" />
+            </svg>
+            <div><small>Apartamento</small><b>De frente com Sacada</b></div>
+          </div>
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 20h16M6 20V7l6-3 6 3v13M9 10h.01M15 10h.01M9 14h.01M15 14h.01M10 20v-3h4v3" />
+            </svg>
+            <div><small>Condomínio</small><b>R$800</b></div>
+          </div>
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 3h12v18l-6-3-6 3zM9 8h6M9 12h6M9 15h3" />
+            </svg>
+            <div><small>IPTU</small><b>11 x R$145</b></div>
+          </div>
+
+          <div class="fact-group-label"><span>Área comum do prédio</span></div>
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 11l1.5-5h11L19 11M3 11h18v7H3zM6 18v2M18 18v2M6 14h.01M18 14h.01" />
+            </svg>
+            <div><small>Vaga de garagem</small><b>1 vaga</b></div>
+          </div>
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="2.5" width="17" height="19" rx="2" />
+              <path d="M12 2.5v19M7 9l2-2 2 2M7 14l2 2 2-2" />
+            </svg>
+            <div><small>Elevador</small><b>Sim</b></div>
+          </div>
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8h16v13H4zM4 8l2-4h12l2 4M8 12h8M8 16h8M9 4v4M15 4v4" />
+            </svg>
+            <div><small>Armário de praia particular</small><b>Sim</b></div>
+          </div>
+
+          <div class="detail property-fact">
+            <svg class="fact-symbol" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4 18V8a5 5 0 0 1 5-5h2a1 1 0 0 1 0 2H9a3 3 0 0 0-3 3v10M11 10a5 5 0 0 1 9.5-2l1 2-9 5-1-2a5 5 0 0 1-.5-3ZM15 16l-.7 1.8M19 14l-.7 1.8M18 19l-.7 1.8" />
+            </svg>
+            <div><small>Ducha externa</small><b>Sim</b></div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    <section class="gallery-section" id="fotos">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Galerias</div>
+            <h2 class="section-title">Galeria</h2>
+          </div>
+          <p class="section-lead"></p>
+        </div>
+        <div class="gallery-groups">
+          <button class="gallery-card" type="button" data-gallery="building"><img
+              src="assets/01-fachada-do-edif-cio.webp" alt="Fachada do Edifício Helsinki"><span
+              class="gallery-card-shade"></span><span class="gallery-card-copy"><small>EDIFÍCIO</small><strong>O prédio
+                e suas dependências</strong><em>Fachada, hall, acessos e garagem</em><b class="btn btn-main">Ver galeria
+                <span aria-hidden="true">↗</span></b></span></button>
+          <button class="gallery-card" type="button" data-gallery="apartment"><img src="assets/04-sala-de-estar.webp"
+              alt="Sala de estar do apartamento"><span class="gallery-card-shade"></span><span
+              class="gallery-card-copy"><small>APARTAMENTO</small><strong>Conheça os ambientes</strong><em>Sala,
+                quartos, varanda e demais cômodos</em><b class="btn btn-main">Ver galeria <span
+                  aria-hidden="true">↗</span></b></span></button>
+          <button class="gallery-card" type="button" data-gallery="beach"><img src="assets/praia-cabo-frio.webp"
+              alt="Praia de Cabo Frio"><span class="gallery-card-shade"></span><span
+              class="gallery-card-copy"><small>CABO FRIO</small><strong>Praias e paisagens da cidade</strong><em>Fotos e
+                vídeos para conhecer a região</em><b class="btn btn-main">Ver galeria <span
+                  aria-hidden="true">↗</span></b></span></button>
+        </div>
+      </div>
+    </section>
+    <div class="gallery-modal" id="galleryModal" aria-hidden="true">
+      <div class="gallery-modal-panel" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
+        <div class="gallery-modal-head">
+          <div><small id="galleryModalEyebrow">GALERIA</small>
+            <h2 id="galleryModalTitle">Galeria de fotos</h2>
+          </div><button class="modal-close btn" id="galleryClose" type="button" aria-label="Fechar galeria">Fechar
+            ×</button>
+        </div>
+        <div class="modal-gallery-grid" id="modalGalleryGrid"></div>
+        <p class="gallery-video-note" id="galleryVideoNote" hidden>Os vídeos da praia serão incluídos nesta galeria
+          assim que estiverem disponíveis.</p>
+      </div>
+    </div>
+    <section class="location" id="localizacao">
+      <div class="wrap location-grid">
+        <div>
+          <div class="eyebrow">Localização</div>
+          <h2>Cabo Frio para aproveitar a pé</h2>
+          <p>Imagine ter o melhor de Cabo Frio a poucos passos de casa!</p>
+          <p>O apartamento está localizado no bairro Passagem, um dos endereços mais charmosos e valorizados da cidade, conhecido por seu polo gastronômico, com excelentes restaurantes e opções de lazer.</p>
+          <p>A três quadras da Praia do Forte, próximo ao Canal do Itajuru e também do Centro comercial, você estará cercado por tudo o que torna Cabo Frio tão especial.</p>
+          <p>Uma localização privilegiada para viver a cidade com liberdade, praticidade e tranquilidade.</p>
+          <p><strong>Aqui, seu carro pode ficar na garagem enquanto você aproveita Cabo Frio a pé!</strong></p>
+        </div>
+        <div class="distance-card">
+          <div class="eyebrow"></div>
+          <div class="location-video-frame">
+            <img class="location-video" src="assets/Video-Project.gif"
+              alt="Vídeo da praia de Cabo Frio">
+          </div>
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="owner" id="contato">
+      <div class="wrap owner-grid">
+        <div>
+          <div class="eyebrow">Negociação direta</div>
+          <h2>Gostou? Converse com o proprietário.</h2>
+          <p>Tire suas dúvidas, peça mais informações e combine uma visita. A negociação é feita diretamente com o
+            proprietário, sem intermediários.</p>
+        </div>
+        <div class="owner-card"><b>Vamos conversar?</b>
+          <p></p>
+          <div class="contact-actions">
+            <a class="whatsapp-nav" href="https://wa.me/5522988161647" target="_blank" rel="noopener noreferrer"
+              aria-label="Conversar pelo WhatsApp com o proprietário" title="WhatsApp do proprietário"><svg
+                viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path fill="currentColor"
+                  d="M16.02 3.2A12.65 12.65 0 0 0 5.1 22.22L3.4 28.4l6.33-1.66A12.7 12.7 0 1 0 16.02 3.2Zm0 23.1c-2 0-3.96-.54-5.67-1.57l-.4-.24-3.76.99 1-3.66-.26-.42a10.4 10.4 0 1 1 9.09 4.9Zm5.72-7.8c-.31-.16-1.84-.91-2.13-1.02-.29-.1-.5-.16-.7.16-.21.31-.8 1.02-.98 1.23-.18.2-.36.23-.67.08-.31-.16-1.31-.48-2.5-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.14-.63.14-.14.31-.36.47-.54.16-.18.21-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.69-.96-2.31-.25-.6-.51-.52-.7-.53h-.6c-.2 0-.54.08-.82.39-.28.31-1.08 1.05-1.08 2.57s1.1 2.98 1.26 3.19c.15.2 2.16 3.3 5.23 4.62.73.31 1.3.5 1.75.64.74.24 1.42.2 1.95.12.6-.09 1.84-.75 2.1-1.48.26-.72.26-1.33.18-1.47-.08-.13-.28-.2-.59-.36Z" />
+              </svg><span>WhatsApp</span></a>
+            <a class="whatsapp-nav phone-nav" href="tel:22988161647" aria-label="Ligar para (22) 98816-1647"
+              title="Ligar para (22) 98816-1647"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z"
+                  fill="currentColor" />
+              </svg><span>(22) 98816-1647</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="wrap">
+        <div class="eyebrow">Dúvidas frequentes</div>
+        <h2>Antes de conhecer.</h2>
+        <!-- <details>
+          <summary>O apartamento fica de frente para a praia?</summary>
+          <p>Não. Fica a três quarteirões da praia e não possui vista para o mar.</p>
+        </details> -->
+        <details>
+          <summary>A negociação é diretamente com o proprietário?</summary>
+          <p>Sim. O site será destinado à venda direta, sem intermediação de imobiliária.</p>
+        </details>
+        <details>
+          <summary>Como faço para visitar?</summary>
+          <p>Entre em contato pelo canal indicado nesta página para combinar um horário.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div><b></b><br>Cabo Frio · Rio de Janeiro · Brasil</div>
+      <div>Venda direta com o proprietário</div>
+    </div>
+  </footer>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
+    <button id="close" class="lightbox-close" type="button" aria-label="Fechar">×</button>
+    <button id="photoPrev" class="lightbox-arrow lightbox-prev" type="button" aria-label="Foto anterior">&lt;</button>
+    <img id="large" src="" alt="">
+    <button id="photoNext" class="lightbox-arrow lightbox-next" type="button" aria-label="Próxima foto">&gt;</button>
+    <p id="caption"></p>
+  </div>
+  <script>
+    const galleries = {
+      building: {
+        title: 'Prédio e Dependências', eyebrow: 'EDIFÍCIO', items: [
+          ['assets/01-fachada-do-edif-cio.webp', 'Fachada do Edifício'], ['assets/04-hall-de-entrada.webp', 'Hall de Entrada'], ['assets/21-garagem.webp', 'Garagem'], ['assets/07-acesso-ao-apartamento.webp', 'Armário de Praia Particular'], ['assets/08-acesso-ao-apartamento.webp', 'Armário de Praia Particular'], ['assets/22-detalhe-da-garagem.webp', 'Ducha Externa']]
+      },
+      apartment: {
+        title: 'Apartamento', eyebrow: 'AMBIENTES INTERNOS', items: [
+          ['assets/04-sala-de-estar.webp', 'Sala de Estar'], ['assets/05-sala-de-estar.webp', 'Sala de Estar'], ['assets/06-corredor.webp', 'Corredor'],  ['assets/11-quarto-com-vista-para-o-verde.webp', 'Quarto com Suíte'], ['assets/12-quarto.webp', 'Quarto com Suíte'],  ['assets/13-banheiro.webp', 'Banheiro (Suíte)'], ['assets/14-banheiro.webp', 'Banheiro (Suíte)'], ['assets/09-quarto.webp', 'Quarto'], ['assets/08-quarto.webp', 'Quarto'],  ['assets/15-banheiro.webp', 'Banheiro'], ['assets/16-banheiro.webp', 'Banheiro'], ['assets/18-cozinha.webp', 'Cozinha'], ['assets/17-cozinha.webp', 'Cozinha'], ['assets/19-rea-de-servi-o.webp', 'Área de Serviço'], ['assets/20-rea-de-servi-o.webp', 'Área de Serviço'],  ['assets/10-varanda.webp', 'Varanda'], ['assets/11-varanda.webp', 'Varanda']]
+      },
+      beach: {title: 'Praias e paisagens de Cabo Frio', eyebrow: 'CABO FRIO · RJ', items: [['assets/praia-cabo-frio.webp', 'Praia do Forte'], ['assets/Praia-do-Forte-Aereo.webp', 'Praia do Forte'], ['assets/bairro-da-passagem-cabo-frio.webp', 'Bairro Passagem'], ['assets/Bairro-da-Passagem2.jpg.webp', 'Bairro Passagem'], ['assets/Canal.webp', 'Canal do Itajuru']]}
+    };
+    const modal = document.getElementById('galleryModal'), grid = document.getElementById('modalGalleryGrid');
+    const lightbox = document.getElementById('lightbox');
+    const largeImage = document.getElementById('large');
+    const caption = document.getElementById('caption');
+    let activeGalleryItems = [];
+    let activePhotoIndex = 0;
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    function showPhoto(index) {
+      if (!activeGalleryItems.length) return;
+      activePhotoIndex = (index + activeGalleryItems.length) % activeGalleryItems.length;
+      const [src, text] = activeGalleryItems[activePhotoIndex];
+      largeImage.src = src;
+      largeImage.alt = text;
+      caption.textContent = text;
+    }
+
+    function openPhoto(index) {
+      showPhoto(index);
+      lightbox.classList.add('open');
+    }
+
+    document.querySelectorAll('[data-gallery]').forEach(card => card.addEventListener('click', () => {
+      const g = galleries[card.dataset.gallery];
+      activeGalleryItems = g.items;
+      document.getElementById('galleryModalTitle').textContent = g.title;
+      document.getElementById('galleryModalEyebrow').textContent = g.eyebrow;
+      grid.innerHTML = '';
+      g.items.forEach(([src, text], index) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'modal-shot';
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = text;
+        img.loading = 'lazy';
+        const label = document.createElement('span');
+        label.textContent = text;
+        b.append(img, label);
+        b.addEventListener('click', () => openPhoto(index));
+        grid.appendChild(b);
+      });
+      document.getElementById('galleryVideoNote').hidden = card.dataset.gallery !== 'beach';
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }));
+
+    function closeGallery() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('galleryClose').addEventListener('click', closeGallery);
+    modal.addEventListener('click', e => { if (e.target === modal) closeGallery(); });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+    }
+
+    document.getElementById('close').addEventListener('click', closeLightbox);
+    document.getElementById('photoPrev').addEventListener('click', () => showPhoto(activePhotoIndex - 1));
+    document.getElementById('photoNext').addEventListener('click', () => showPhoto(activePhotoIndex + 1));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+    // No celular, deslizar horizontalmente troca a foto.
+    lightbox.addEventListener('touchstart', e => {
+      if (!e.changedTouches.length) return;
+      touchStartX = e.changedTouches[0].clientX;
+      touchStartY = e.changedTouches[0].clientY;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', e => {
+      if (!e.changedTouches.length) return;
+      const deltaX = e.changedTouches[0].clientX - touchStartX;
+      const deltaY = e.changedTouches[0].clientY - touchStartY;
+      if (Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY) * 1.2) {
+        showPhoto(activePhotoIndex + (deltaX < 0 ? 1 : -1));
+      }
+    }, { passive: true });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { closeLightbox(); closeGallery(); }
+      if (lightbox.classList.contains('open') && e.key === 'ArrowLeft') showPhoto(activePhotoIndex - 1);
+      if (lightbox.classList.contains('open') && e.key === 'ArrowRight') showPhoto(activePhotoIndex + 1);
+    });
+  </script>
+  <script>
+    (function () {
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('#mobile-navigation');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function () {
+        const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+        toggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+        menu.classList.toggle('open', !isOpen);
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Abrir menu');
+        });
+      });
+      document.addEventListener('click', function (event) {
+        if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Abrir menu');
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
