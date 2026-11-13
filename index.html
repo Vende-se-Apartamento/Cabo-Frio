@@ -1681,6 +1681,9 @@
     function openPhoto(index) {
       showPhoto(index);
       lightbox.classList.add('open');
+      // Registra a foto no histórico para que o botão Voltar do celular
+      // feche primeiro o visualizador, sem sair da página.
+      history.pushState({ siteGallery: 'lightbox' }, '', location.href);
     }
 
     document.querySelectorAll('[data-gallery]').forEach(card => card.addEventListener('click', () => {
@@ -1707,20 +1710,38 @@
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      // Cria uma etapa no histórico para o botão Voltar fechar a galeria.
+      history.pushState({ siteGallery: 'modal' }, '', location.href);
     }));
 
-    function closeGallery() {
+    function closeGallery(updateHistory = true) {
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
+      if (updateHistory && history.state && history.state.siteGallery === 'modal') {
+        history.back();
+      }
     }
 
     document.getElementById('galleryClose').addEventListener('click', closeGallery);
     modal.addEventListener('click', e => { if (e.target === modal) closeGallery(); });
 
-    function closeLightbox() {
+    function closeLightbox(updateHistory = true) {
       lightbox.classList.remove('open');
+      if (updateHistory && history.state && history.state.siteGallery === 'lightbox') {
+        history.back();
+      }
     }
+
+    // O botão Voltar do Android/iPhone fecha apenas a camada que está aberta:
+    // primeiro a foto ampliada e, em seguida, a galeria.
+    window.addEventListener('popstate', () => {
+      if (lightbox.classList.contains('open')) {
+        closeLightbox(false);
+      } else if (modal.classList.contains('open')) {
+        closeGallery(false);
+      }
+    });
 
     document.getElementById('close').addEventListener('click', closeLightbox);
     document.getElementById('photoPrev').addEventListener('click', () => showPhoto(activePhotoIndex - 1));
@@ -1744,7 +1765,10 @@
     }, { passive: true });
 
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { closeLightbox(); closeGallery(); }
+      if (e.key === 'Escape') {
+        if (lightbox.classList.contains('open')) closeLightbox();
+        else if (modal.classList.contains('open')) closeGallery();
+      }
       if (lightbox.classList.contains('open') && e.key === 'ArrowLeft') showPhoto(activePhotoIndex - 1);
       if (lightbox.classList.contains('open') && e.key === 'ArrowRight') showPhoto(activePhotoIndex + 1);
     });
