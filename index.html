@@ -1253,6 +1253,42 @@
         min-height: 40px
       }
     }
+
+    /* Visualização imersiva exclusiva para smartphones */
+    @media (max-width: 760px) {
+      .lightbox.immersive {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        max-height: 100dvh;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        background: #000;
+        overflow: hidden;
+        z-index: 9999;
+        touch-action: pan-y;
+      }
+
+      .lightbox.immersive img {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        max-width: 100vw;
+        max-height: 100dvh;
+        object-fit: contain;
+        cursor: zoom-out;
+      }
+
+      .lightbox.immersive .lightbox-close,
+      .lightbox.immersive .lightbox-arrow,
+      .lightbox.immersive p {
+        display: none !important;
+      }
+    }
+
   </style>
   <style>
     /* WhatsApp centralizado abaixo da apresentação, mantendo a fotografia e o menu intactos */
@@ -1598,7 +1634,7 @@
         <div class="owner-card"><b>Vamos conversar?</b>
           <p></p>
           <div class="contact-actions">
-            <a class="whatsapp-nav" href="https://wa.me/5522988161647"
+            <a class="whatsapp-nav" href="https://wa.me/5522988161647" data-whatsapp-link
               aria-label="Conversar pelo WhatsApp com o proprietário" title="WhatsApp do proprietário"><svg
                 viewBox="0 0 32 32" aria-hidden="true" focusable="false">
                 <path fill="currentColor"
@@ -1734,10 +1770,53 @@
     // O botão Voltar do Android/iPhone fecha apenas a camada que está aberta:
     // primeiro a foto ampliada e, em seguida, a galeria.
     window.addEventListener('popstate', () => {
-      if (lightbox.classList.contains('open')) {
+      if (lightbox.classList.contains('immersive')) {
+        leaveImmersive(false);
+      } else if (lightbox.classList.contains('open')) {
         closeLightbox(false);
       } else if (modal.classList.contains('open')) {
         closeGallery(false);
+      }
+    });
+
+    const isSmartphone = window.matchMedia('(max-width: 760px)').matches &&
+      /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    async function enterImmersive() {
+      if (!isSmartphone || !lightbox.classList.contains('open') ||
+          lightbox.classList.contains('immersive')) return;
+
+      lightbox.classList.add('immersive');
+      // A API de tela cheia remove a interface do navegador quando o aparelho permite.
+      try {
+        if (lightbox.requestFullscreen) {
+          await lightbox.requestFullscreen();
+        } else if (largeImage.webkitEnterFullscreen) {
+          // Alguns navegadores móveis oferecem tela cheia apenas para mídia.
+          largeImage.webkitEnterFullscreen();
+        }
+      } catch (error) {
+        // O modo imersivo em CSS continua funcionando como alternativa.
+      }
+    }
+
+    function leaveImmersive(fromHistory = true) {
+      if (!lightbox.classList.contains('immersive')) return;
+      lightbox.classList.remove('immersive');
+      if (document.fullscreenElement && document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    largeImage.addEventListener('click', () => {
+      if (isSmartphone && !lightbox.classList.contains('immersive')) {
+        enterImmersive();
+      }
+    });
+
+    document.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement && lightbox.classList.contains('immersive')) {
+        lightbox.classList.remove('immersive');
       }
     });
 
@@ -1764,7 +1843,8 @@
 
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') {
-        if (lightbox.classList.contains('open')) closeLightbox();
+        if (lightbox.classList.contains('immersive')) leaveImmersive(false);
+        else if (lightbox.classList.contains('open')) closeLightbox();
         else if (modal.classList.contains('open')) closeGallery();
       }
       if (lightbox.classList.contains('open') && e.key === 'ArrowLeft') showPhoto(activePhotoIndex - 1);
